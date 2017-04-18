@@ -1,0 +1,3063 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/visionmedia/co-fs">co-fs (v1.2.0)</a>
+</h1>
+<h4>fs wrappers for 'co'</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs">module co-fs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.appendFile">
+            function <span class="apidocSignatureSpan">co-fs.</span>appendFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.chmod">
+            function <span class="apidocSignatureSpan">co-fs.</span>chmod
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.chown">
+            function <span class="apidocSignatureSpan">co-fs.</span>chown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.close">
+            function <span class="apidocSignatureSpan">co-fs.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.createReadStream">
+            function <span class="apidocSignatureSpan">co-fs.</span>createReadStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.exists">
+            function <span class="apidocSignatureSpan">co-fs.</span>exists
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.fchmod">
+            function <span class="apidocSignatureSpan">co-fs.</span>fchmod
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.fchown">
+            function <span class="apidocSignatureSpan">co-fs.</span>fchown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.fstat">
+            function <span class="apidocSignatureSpan">co-fs.</span>fstat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.fsync">
+            function <span class="apidocSignatureSpan">co-fs.</span>fsync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.ftruncate">
+            function <span class="apidocSignatureSpan">co-fs.</span>ftruncate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.futimes">
+            function <span class="apidocSignatureSpan">co-fs.</span>futimes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.link">
+            function <span class="apidocSignatureSpan">co-fs.</span>link
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.lstat">
+            function <span class="apidocSignatureSpan">co-fs.</span>lstat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.mkdir">
+            function <span class="apidocSignatureSpan">co-fs.</span>mkdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.open">
+            function <span class="apidocSignatureSpan">co-fs.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.read">
+            function <span class="apidocSignatureSpan">co-fs.</span>read
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.readFile">
+            function <span class="apidocSignatureSpan">co-fs.</span>readFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.readdir">
+            function <span class="apidocSignatureSpan">co-fs.</span>readdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.readlink">
+            function <span class="apidocSignatureSpan">co-fs.</span>readlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.realpath">
+            function <span class="apidocSignatureSpan">co-fs.</span>realpath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.rename">
+            function <span class="apidocSignatureSpan">co-fs.</span>rename
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.rmdir">
+            function <span class="apidocSignatureSpan">co-fs.</span>rmdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.stat">
+            function <span class="apidocSignatureSpan">co-fs.</span>stat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.symlink">
+            function <span class="apidocSignatureSpan">co-fs.</span>symlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.unlink">
+            function <span class="apidocSignatureSpan">co-fs.</span>unlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.utimes">
+            function <span class="apidocSignatureSpan">co-fs.</span>utimes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.write">
+            function <span class="apidocSignatureSpan">co-fs.</span>write
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.writeFile">
+            function <span class="apidocSignatureSpan">co-fs.</span>writeFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.appendFile">module co-fs.appendFile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.appendFile.appendFile">
+            function <span class="apidocSignatureSpan">co-fs.</span>appendFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.chmod">module co-fs.chmod</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.chmod.chmod">
+            function <span class="apidocSignatureSpan">co-fs.</span>chmod
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.chown">module co-fs.chown</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.chown.chown">
+            function <span class="apidocSignatureSpan">co-fs.</span>chown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.close">module co-fs.close</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.close.close">
+            function <span class="apidocSignatureSpan">co-fs.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.createReadStream">module co-fs.createReadStream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.createReadStream.createReadStream">
+            function <span class="apidocSignatureSpan">co-fs.</span>createReadStream
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.exists">module co-fs.exists</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.exists.exists">
+            function <span class="apidocSignatureSpan">co-fs.</span>exists
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.fchmod">module co-fs.fchmod</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.fchmod.fchmod">
+            function <span class="apidocSignatureSpan">co-fs.</span>fchmod
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.fchown">module co-fs.fchown</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.fchown.fchown">
+            function <span class="apidocSignatureSpan">co-fs.</span>fchown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.fstat">module co-fs.fstat</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.fstat.fstat">
+            function <span class="apidocSignatureSpan">co-fs.</span>fstat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.fsync">module co-fs.fsync</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.fsync.fsync">
+            function <span class="apidocSignatureSpan">co-fs.</span>fsync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.ftruncate">module co-fs.ftruncate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.ftruncate.ftruncate">
+            function <span class="apidocSignatureSpan">co-fs.</span>ftruncate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.futimes">module co-fs.futimes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.futimes.futimes">
+            function <span class="apidocSignatureSpan">co-fs.</span>futimes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.link">module co-fs.link</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.link.link">
+            function <span class="apidocSignatureSpan">co-fs.</span>link
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.lstat">module co-fs.lstat</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.lstat.lstat">
+            function <span class="apidocSignatureSpan">co-fs.</span>lstat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.mkdir">module co-fs.mkdir</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.mkdir.mkdir">
+            function <span class="apidocSignatureSpan">co-fs.</span>mkdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.open">module co-fs.open</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.open.open">
+            function <span class="apidocSignatureSpan">co-fs.</span>open
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.read">module co-fs.read</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.read.read">
+            function <span class="apidocSignatureSpan">co-fs.</span>read
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.readFile">module co-fs.readFile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.readFile.readFile">
+            function <span class="apidocSignatureSpan">co-fs.</span>readFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.readdir">module co-fs.readdir</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.readdir.readdir">
+            function <span class="apidocSignatureSpan">co-fs.</span>readdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.readlink">module co-fs.readlink</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.readlink.readlink">
+            function <span class="apidocSignatureSpan">co-fs.</span>readlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.realpath">module co-fs.realpath</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.realpath.realpath">
+            function <span class="apidocSignatureSpan">co-fs.</span>realpath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.rename">module co-fs.rename</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.rename.rename">
+            function <span class="apidocSignatureSpan">co-fs.</span>rename
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.rmdir">module co-fs.rmdir</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.rmdir.rmdir">
+            function <span class="apidocSignatureSpan">co-fs.</span>rmdir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.stat">module co-fs.stat</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.stat.stat">
+            function <span class="apidocSignatureSpan">co-fs.</span>stat
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.symlink">module co-fs.symlink</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.symlink.symlink">
+            function <span class="apidocSignatureSpan">co-fs.</span>symlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.unlink">module co-fs.unlink</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.unlink.unlink">
+            function <span class="apidocSignatureSpan">co-fs.</span>unlink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.utimes">module co-fs.utimes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.utimes.utimes">
+            function <span class="apidocSignatureSpan">co-fs.</span>utimes
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.write">module co-fs.write</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.write.write">
+            function <span class="apidocSignatureSpan">co-fs.</span>write
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.co-fs.writeFile">module co-fs.writeFile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.co-fs.writeFile.writeFile">
+            function <span class="apidocSignatureSpan">co-fs.</span>writeFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs" id="apidoc.module.co-fs">module co-fs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.appendFile" id="apidoc.element.co-fs.appendFile">
+        function <span class="apidocSignatureSpan">co-fs.</span>appendFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">appendFile = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.chmod" id="apidoc.element.co-fs.chmod">
+        function <span class="apidocSignatureSpan">co-fs.</span>chmod
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chmod = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.chown" id="apidoc.element.co-fs.chown">
+        function <span class="apidocSignatureSpan">co-fs.</span>chown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chown = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.close" id="apidoc.element.co-fs.close">
+        function <span class="apidocSignatureSpan">co-fs.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.createReadStream" id="apidoc.element.co-fs.createReadStream">
+        function <span class="apidocSignatureSpan">co-fs.</span>createReadStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createReadStream = function (){
+  return stream(fs.createReadStream.apply(null, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.exists" id="apidoc.element.co-fs.exists">
+        function <span class="apidocSignatureSpan">co-fs.</span>exists
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exists = function (path){
+  return function(done){
+    fs.stat(path, function(err, res){
+      done(null, !err);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.fchmod" id="apidoc.element.co-fs.fchmod">
+        function <span class="apidocSignatureSpan">co-fs.</span>fchmod
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fchmod = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.fchown" id="apidoc.element.co-fs.fchown">
+        function <span class="apidocSignatureSpan">co-fs.</span>fchown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fchown = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.fstat" id="apidoc.element.co-fs.fstat">
+        function <span class="apidocSignatureSpan">co-fs.</span>fstat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fstat = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.fsync" id="apidoc.element.co-fs.fsync">
+        function <span class="apidocSignatureSpan">co-fs.</span>fsync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fsync = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.ftruncate" id="apidoc.element.co-fs.ftruncate">
+        function <span class="apidocSignatureSpan">co-fs.</span>ftruncate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ftruncate = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.futimes" id="apidoc.element.co-fs.futimes">
+        function <span class="apidocSignatureSpan">co-fs.</span>futimes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">futimes = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.link" id="apidoc.element.co-fs.link">
+        function <span class="apidocSignatureSpan">co-fs.</span>link
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">link = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.lstat" id="apidoc.element.co-fs.lstat">
+        function <span class="apidocSignatureSpan">co-fs.</span>lstat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lstat = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.mkdir" id="apidoc.element.co-fs.mkdir">
+        function <span class="apidocSignatureSpan">co-fs.</span>mkdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkdir = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.open" id="apidoc.element.co-fs.open">
+        function <span class="apidocSignatureSpan">co-fs.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.read" id="apidoc.element.co-fs.read">
+        function <span class="apidocSignatureSpan">co-fs.</span>read
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.readFile" id="apidoc.element.co-fs.readFile">
+        function <span class="apidocSignatureSpan">co-fs.</span>readFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFile = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## Example
+
+ Use all the regular async fs functions without callback hell:
+
+```js
+var json = yield fs.<span class="apidocCodeKeywordSpan">readFile</span>('package.json', 'utf8')
+var files = yield fs.readdir('/tmp')
+```
+
+## License
+
+MIT
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.readdir" id="apidoc.element.co-fs.readdir">
+        function <span class="apidocSignatureSpan">co-fs.</span>readdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readdir = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Example
+
+ Use all the regular async fs functions without callback hell:
+
+```js
+var json = yield fs.readFile('package.json', 'utf8')
+var files = yield fs.<span class="apidocCodeKeywordSpan">readdir</span>('/tmp')
+```
+
+## License
+
+MIT
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.readlink" id="apidoc.element.co-fs.readlink">
+        function <span class="apidocSignatureSpan">co-fs.</span>readlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readlink = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.realpath" id="apidoc.element.co-fs.realpath">
+        function <span class="apidocSignatureSpan">co-fs.</span>realpath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">realpath = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.rename" id="apidoc.element.co-fs.rename">
+        function <span class="apidocSignatureSpan">co-fs.</span>rename
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rename = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.rmdir" id="apidoc.element.co-fs.rmdir">
+        function <span class="apidocSignatureSpan">co-fs.</span>rmdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rmdir = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.stat" id="apidoc.element.co-fs.stat">
+        function <span class="apidocSignatureSpan">co-fs.</span>stat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stat = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  exports[name] = thunk(fs[name]);
+});
+
+// .exists is still messed
+
+exports.exists = function(path){
+  return function(done){
+    fs.<span class="apidocCodeKeywordSpan">stat</span>(path, function(err, res){
+      done(null, !err);
+    });
+  }
+};
+
+// .createReadStream
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.symlink" id="apidoc.element.co-fs.symlink">
+        function <span class="apidocSignatureSpan">co-fs.</span>symlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">symlink = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.unlink" id="apidoc.element.co-fs.unlink">
+        function <span class="apidocSignatureSpan">co-fs.</span>unlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlink = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.utimes" id="apidoc.element.co-fs.utimes">
+        function <span class="apidocSignatureSpan">co-fs.</span>utimes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">utimes = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.write" id="apidoc.element.co-fs.write">
+        function <span class="apidocSignatureSpan">co-fs.</span>write
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.writeFile" id="apidoc.element.co-fs.writeFile">
+        function <span class="apidocSignatureSpan">co-fs.</span>writeFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeFile = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.appendFile" id="apidoc.module.co-fs.appendFile">module co-fs.appendFile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.appendFile.appendFile" id="apidoc.element.co-fs.appendFile.appendFile">
+        function <span class="apidocSignatureSpan">co-fs.</span>appendFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">appendFile = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.chmod" id="apidoc.module.co-fs.chmod">module co-fs.chmod</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.chmod.chmod" id="apidoc.element.co-fs.chmod.chmod">
+        function <span class="apidocSignatureSpan">co-fs.</span>chmod
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chmod = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.chown" id="apidoc.module.co-fs.chown">module co-fs.chown</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.chown.chown" id="apidoc.element.co-fs.chown.chown">
+        function <span class="apidocSignatureSpan">co-fs.</span>chown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chown = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.close" id="apidoc.module.co-fs.close">module co-fs.close</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.close.close" id="apidoc.element.co-fs.close.close">
+        function <span class="apidocSignatureSpan">co-fs.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.createReadStream" id="apidoc.module.co-fs.createReadStream">module co-fs.createReadStream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.createReadStream.createReadStream" id="apidoc.element.co-fs.createReadStream.createReadStream">
+        function <span class="apidocSignatureSpan">co-fs.</span>createReadStream
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createReadStream = function (){
+  return stream(fs.createReadStream.apply(null, arguments));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.exists" id="apidoc.module.co-fs.exists">module co-fs.exists</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.exists.exists" id="apidoc.element.co-fs.exists.exists">
+        function <span class="apidocSignatureSpan">co-fs.</span>exists
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exists = function (path){
+  return function(done){
+    fs.stat(path, function(err, res){
+      done(null, !err);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.fchmod" id="apidoc.module.co-fs.fchmod">module co-fs.fchmod</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.fchmod.fchmod" id="apidoc.element.co-fs.fchmod.fchmod">
+        function <span class="apidocSignatureSpan">co-fs.</span>fchmod
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fchmod = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.fchown" id="apidoc.module.co-fs.fchown">module co-fs.fchown</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.fchown.fchown" id="apidoc.element.co-fs.fchown.fchown">
+        function <span class="apidocSignatureSpan">co-fs.</span>fchown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fchown = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.fstat" id="apidoc.module.co-fs.fstat">module co-fs.fstat</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.fstat.fstat" id="apidoc.element.co-fs.fstat.fstat">
+        function <span class="apidocSignatureSpan">co-fs.</span>fstat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fstat = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.fsync" id="apidoc.module.co-fs.fsync">module co-fs.fsync</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.fsync.fsync" id="apidoc.element.co-fs.fsync.fsync">
+        function <span class="apidocSignatureSpan">co-fs.</span>fsync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fsync = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.ftruncate" id="apidoc.module.co-fs.ftruncate">module co-fs.ftruncate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.ftruncate.ftruncate" id="apidoc.element.co-fs.ftruncate.ftruncate">
+        function <span class="apidocSignatureSpan">co-fs.</span>ftruncate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ftruncate = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.futimes" id="apidoc.module.co-fs.futimes">module co-fs.futimes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.futimes.futimes" id="apidoc.element.co-fs.futimes.futimes">
+        function <span class="apidocSignatureSpan">co-fs.</span>futimes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">futimes = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.link" id="apidoc.module.co-fs.link">module co-fs.link</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.link.link" id="apidoc.element.co-fs.link.link">
+        function <span class="apidocSignatureSpan">co-fs.</span>link
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">link = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.lstat" id="apidoc.module.co-fs.lstat">module co-fs.lstat</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.lstat.lstat" id="apidoc.element.co-fs.lstat.lstat">
+        function <span class="apidocSignatureSpan">co-fs.</span>lstat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lstat = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.mkdir" id="apidoc.module.co-fs.mkdir">module co-fs.mkdir</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.mkdir.mkdir" id="apidoc.element.co-fs.mkdir.mkdir">
+        function <span class="apidocSignatureSpan">co-fs.</span>mkdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkdir = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.open" id="apidoc.module.co-fs.open">module co-fs.open</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.open.open" id="apidoc.element.co-fs.open.open">
+        function <span class="apidocSignatureSpan">co-fs.</span>open
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.read" id="apidoc.module.co-fs.read">module co-fs.read</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.read.read" id="apidoc.element.co-fs.read.read">
+        function <span class="apidocSignatureSpan">co-fs.</span>read
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.readFile" id="apidoc.module.co-fs.readFile">module co-fs.readFile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.readFile.readFile" id="apidoc.element.co-fs.readFile.readFile">
+        function <span class="apidocSignatureSpan">co-fs.</span>readFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readFile = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```
+
+## Example
+
+ Use all the regular async fs functions without callback hell:
+
+```js
+var json = yield fs.<span class="apidocCodeKeywordSpan">readFile</span>('package.json', 'utf8')
+var files = yield fs.readdir('/tmp')
+```
+
+## License
+
+MIT
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.readdir" id="apidoc.module.co-fs.readdir">module co-fs.readdir</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.readdir.readdir" id="apidoc.element.co-fs.readdir.readdir">
+        function <span class="apidocSignatureSpan">co-fs.</span>readdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readdir = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Example
+
+ Use all the regular async fs functions without callback hell:
+
+```js
+var json = yield fs.readFile('package.json', 'utf8')
+var files = yield fs.<span class="apidocCodeKeywordSpan">readdir</span>('/tmp')
+```
+
+## License
+
+MIT
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.readlink" id="apidoc.module.co-fs.readlink">module co-fs.readlink</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.readlink.readlink" id="apidoc.element.co-fs.readlink.readlink">
+        function <span class="apidocSignatureSpan">co-fs.</span>readlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readlink = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.realpath" id="apidoc.module.co-fs.realpath">module co-fs.realpath</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.realpath.realpath" id="apidoc.element.co-fs.realpath.realpath">
+        function <span class="apidocSignatureSpan">co-fs.</span>realpath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">realpath = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.rename" id="apidoc.module.co-fs.rename">module co-fs.rename</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.rename.rename" id="apidoc.element.co-fs.rename.rename">
+        function <span class="apidocSignatureSpan">co-fs.</span>rename
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rename = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.rmdir" id="apidoc.module.co-fs.rmdir">module co-fs.rmdir</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.rmdir.rmdir" id="apidoc.element.co-fs.rmdir.rmdir">
+        function <span class="apidocSignatureSpan">co-fs.</span>rmdir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rmdir = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.stat" id="apidoc.module.co-fs.stat">module co-fs.stat</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.stat.stat" id="apidoc.element.co-fs.stat.stat">
+        function <span class="apidocSignatureSpan">co-fs.</span>stat
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stat = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  exports[name] = thunk(fs[name]);
+});
+
+// .exists is still messed
+
+exports.exists = function(path){
+  return function(done){
+    fs.<span class="apidocCodeKeywordSpan">stat</span>(path, function(err, res){
+      done(null, !err);
+    });
+  }
+};
+
+// .createReadStream
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.symlink" id="apidoc.module.co-fs.symlink">module co-fs.symlink</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.symlink.symlink" id="apidoc.element.co-fs.symlink.symlink">
+        function <span class="apidocSignatureSpan">co-fs.</span>symlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">symlink = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.unlink" id="apidoc.module.co-fs.unlink">module co-fs.unlink</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.unlink.unlink" id="apidoc.element.co-fs.unlink.unlink">
+        function <span class="apidocSignatureSpan">co-fs.</span>unlink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unlink = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.utimes" id="apidoc.module.co-fs.utimes">module co-fs.utimes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.utimes.utimes" id="apidoc.element.co-fs.utimes.utimes">
+        function <span class="apidocSignatureSpan">co-fs.</span>utimes
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">utimes = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.write" id="apidoc.module.co-fs.write">module co-fs.write</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.write.write" id="apidoc.element.co-fs.write.write">
+        function <span class="apidocSignatureSpan">co-fs.</span>write
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.co-fs.writeFile" id="apidoc.module.co-fs.writeFile">module co-fs.writeFile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.co-fs.writeFile.writeFile" id="apidoc.element.co-fs.writeFile.writeFile">
+        function <span class="apidocSignatureSpan">co-fs.</span>writeFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeFile = function (){
+  var args = [].slice.call(arguments);
+  var results;
+  var called;
+  var cb;
+
+  args.push(function(){
+    results = arguments;
+
+    if (cb &amp;&amp; !called) {
+      called = true;
+      cb.apply(this, results);
+    }
+  });
+
+  fn.apply(this, args);
+
+  return function(fn){
+    cb = fn;
+
+    if (results &amp;&amp; !called) {
+      called = true;
+      fn.apply(this, results);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
