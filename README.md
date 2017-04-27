@@ -1,6 +1,6 @@
 # npmdoc-co-fs
 
-#### api documentation for  [co-fs (v1.2.0)](https://github.com/visionmedia/co-fs)  [![npm package](https://img.shields.io/npm/v/npmdoc-co-fs.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-co-fs) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-co-fs.svg)](https://travis-ci.org/npmdoc/node-npmdoc-co-fs)
+#### basic api documentation for  [co-fs (v1.2.0)](https://github.com/visionmedia/co-fs)  [![npm package](https://img.shields.io/npm/v/npmdoc-co-fs.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-co-fs) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-co-fs.svg)](https://travis-ci.org/npmdoc/node-npmdoc-co-fs)
 
 #### fs wrappers for 'co'
 
@@ -59,7 +59,8 @@
         "type": "git",
         "url": "git+https://github.com/visionmedia/co-fs.git"
     },
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "bin": {}
 }
 ```
 
